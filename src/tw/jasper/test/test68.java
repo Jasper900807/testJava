@@ -7,7 +7,7 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class test67 {
+public class test68 {
 
 	public static void main(String[] args) {
 		try {
