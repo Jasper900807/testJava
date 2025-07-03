@@ -11,7 +11,7 @@ public class test67 {
 
 	public static void main(String[] args) {
 		try {
-			URL url = new URL("https://s.yimg.com/uu/api/res/1.2/b6HObBflGgl4FocBuQRGRw--~B/Zmk9ZmlsbDtoPTI0Njt3PTM2OTthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/ro/carture__812/b101ffdfade409c411ce525951fce48f");
+			URL url = new URL("");
 			HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
 			
 			conn.connect();
@@ -29,7 +29,6 @@ public class test67 {
 			bin.close();
 			
 			System.out.println("DONE");
-			
 		} 
 		catch (Exception e) {
 			e.printStackTrace();		

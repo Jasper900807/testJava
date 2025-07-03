@@ -1,8 +1,8 @@
 package tw.jasper.test;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.FileOutputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -11,29 +11,29 @@ public class test68 {
 
 	public static void main(String[] args) {
 		try {
-			URL url = new URL("https://s.yimg.com/uu/api/res/1.2/b6HObBflGgl4FocBuQRGRw--~B/Zmk9ZmlsbDtoPTI0Njt3PTM2OTthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/ro/carture__812/b101ffdfade409c411ce525951fce48f");
+			URL url = new URL("https://www.ispan.com.tw");
 			HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
 			
-			conn.connect();
-			BufferedInputStream bin = new BufferedInputStream(conn.getInputStream());
-			BufferedOutputStream bout = new BufferedOutputStream(new FileOutputStream("dir2/yahoo.jpg"));
-			
-			byte[] buf = new byte[4*1024];
-			int len; int i = 0;
-			
-			while ( (len = bin.read(buf)) != -1) {
-				bout.write(buf, 0, len);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			String line;
+			StringBuffer sb = new StringBuffer();
+			while ( (line = reader.readLine()) != null) {
+				sb.append(line + "\n");
 			}
-			bout.flush();
-			bout.close();
-			bin.close();
+			reader.close();
+			conn.disconnect();
+			
+			FileOutputStream fout = new FileOutputStream("dir1/iii.html");
+			fout.write(sb.toString().getBytes());
+			fout.close();
 			
 			System.out.println("DONE");
 			
 		} 
 		catch (Exception e) {
-			e.printStackTrace();		
+			e.printStackTrace();
 		}
+
 	}
 
 }
