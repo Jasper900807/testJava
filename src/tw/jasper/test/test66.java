@@ -36,7 +36,6 @@ public class test66 {
 	}
 	static void parseJSON(String json) {
 		JSONArray root = new JSONArray(json);
-		System.out.println(root.length());
 		for (int i=0; i<root.length(); i++) {
 			JSONObject row = root.getJSONObject(i);
 			String name = row.getString("Name");
