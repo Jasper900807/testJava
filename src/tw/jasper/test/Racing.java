@@ -12,7 +12,8 @@ public class Racing extends JFrame {
 	private JButton go;
 	private JLabel[] lanes;
 	private Car[] cars;
-	private int score = 1;
+	private int score;
+	private boolean isFinished;
 	
 	
 	public Racing() {
@@ -39,6 +40,7 @@ public class Racing extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				go();
+				
 			}
 		});
 	}
@@ -46,6 +48,7 @@ public class Racing extends JFrame {
 	private void go() {
 		cars = new Car[8];
 		score = 1;
+		isFinished = false;
 		for (int i=0; i<lanes.length; i++) {
 			cars[i] = new Car(i);
 			cars[i].start();
@@ -66,20 +69,39 @@ public class Racing extends JFrame {
 			for (int i=0; i<100; i++) {
 				lanes[lane].setText(sb.append(">").toString());
 				try {
-					Thread.sleep(10 + (int)(Math.random()*100));
-				} catch (InterruptedException e) {
-					e.printStackTrace();
+					Thread.sleep(5 + (int)(Math.random()*30));
+				}
+				catch (InterruptedException e) {
+					System.out.println("interupt");
+					break;
 				}
 			}
-			lanes[lane].setText(sb.append(String.format("--- Grade : %d", score++)).toString());
-			interrupt();
+			
+			synchronized (Racing.this) {
+				if (!isFinished) {
+					isFinished = true;
+					lanes[lane].setText(sb.append("      \\WINNER/").toString());
+					killGame();					
+				}
+			}
+			
+			
+		}
+
+		private void killGame() {
+			for (Car c : cars) {
+				if (c != null && c.isAlive()) {
+					c.interrupt();
+				}
+			}
+			
 		}
 	}
 	
 
 	public static void main(String[] args) {
 		new Racing();
-
+		
 	}
 
 }
