@@ -82,5 +82,6 @@
 	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/dir1/jasckson/jackson-annotations-2.15.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/dir1/jasckson/jackson-core-2.15.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/dir1/jasckson/jackson-databind-2.15.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
