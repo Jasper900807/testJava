@@ -10,7 +10,11 @@ public class JDBC09 {
 		System.out.println(hashPasswd);
 		
 		String passwd1 = "123457";
-		if ()
+		if (BCrypt.checkpw(passwd1, hashPasswd)) {
+			System.out.println("OK");
+		}else {
+			System.out.println("XX");
+		}
 
 	}
 
