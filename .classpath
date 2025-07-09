@@ -6,11 +6,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="D:/project/eclipse-workspace/testJava/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/project/eclipse-workspace/testJava/dir1/json-20250517.jar"/>
-	<classpathentry kind="lib" path="D:/project/eclipse-workspace/testJava/dir1/jasckson/jackson-annotations-2.15.2.jar"/>
-	<classpathentry kind="lib" path="D:/project/eclipse-workspace/testJava/dir1/jasckson/jackson-core-2.15.2.jar"/>
-	<classpathentry kind="lib" path="D:/project/eclipse-workspace/testJava/dir1/jasckson/jackson-databind-2.15.2.jar"/>
-	<classpathentry kind="lib" path="D:/project/eclipse-workspace/testJava/dir1/jsoup-1.21.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/dir1/json-20250517.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/dir1/jsoup-1.21.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/dir1/jasckson/jackson-annotations-2.15.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/dir1/jasckson/jackson-core-2.15.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/dir1/jasckson/jackson-databind-2.15.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/testJava/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
