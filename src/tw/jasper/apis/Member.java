@@ -2,13 +2,20 @@ package tw.jasper.apis;
 
 import java.util.Objects;
 
+// DTO  / Entity
 public class Member {
 	private int id;
 	private String account;
 	private String passwd;
 	private String name;
 	
-	
+	public Member() {};
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
 	public Member(int id, String account, String passwd, String name) {
 		this.id = id;
 		this.account = account;
